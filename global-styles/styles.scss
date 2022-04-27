@@ -158,7 +158,8 @@ button {
     font-weight: bold;
     margin: 2em 0 1em;
 }
-.item p {
+.item p,
+.item div {
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -276,14 +277,11 @@ button {
 .form-submit [class^='btn-']:hover {
     cursor: pointer;
 }
-.form-submit .btn-send,
-.form-submit .btn-submit {
-    font-size: 1rem;
-}
 .form-submit .btn-send {
     align-items: center;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    font-size: 1rem;
     width: 6em;
 }
 .form-submit .btn-lookingglass svg {

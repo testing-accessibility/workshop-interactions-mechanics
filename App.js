@@ -21,7 +21,7 @@ import ScreenReaderExercise from "./exercise3-screen-reader-overlap/page-listing
 import AnnouncementsExercise from "./exercise4-announcements-with-AT/page-submit-listing"
 import AppScriptingPage from "./exercise5-advanced-scripting-ARIA/page-adventures-hikes"
 
-import imgFooterLogo from "/images/icons/footer-logo.svg"
+import imgFooterLogo from "images/icons/footer-logo.svg"
 
 export function App() {
 	return <>
