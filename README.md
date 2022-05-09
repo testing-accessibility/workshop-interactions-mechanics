@@ -101,6 +101,8 @@ yarn start
 This should start the site for your browser at the address indicated in your Terminal:
 `http://localhost:1234`
 
+You can also view a deployed version: https://workshop-interactions-mechanics.testingaccessibility.com/
+
 ## Working through the exercises
 
 This is my favorite topic in accessibility: user interactions and mechanics! We’ll dig into common patterns for keyboard interactions and how screen readers overlap. We’ll use JavaScript and advanced techniques to craft accessible experiences for a variety of user inputs.
@@ -108,7 +110,7 @@ This is my favorite topic in accessibility: user interactions and mechanics! We�
 This workshop will touch on numerous components including skip links, the date picker, form validation, and an image slideshow. The local URL is: `http://localhost:1234/`
 
 - [exercise1-the-keyboard](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise1-the-keyboard)
-- [exercise2-focus-management-js](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise2-focus-management-js)
+- [exercise2-focus-management](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise2-focus-management)
 - [exercise3-screen-reader-overlap](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise3-screen-reader-overlap)
 - [exercise4-announcements-with-AT](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise4-announcements-with-AT)
 - [exercise5-advanced-scripting-ARIA](https://github.com/testing-accessibility/workshop-interactions-mechanics/tree/main/exercise5-advanced-scripting-ARIA)
