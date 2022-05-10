@@ -7,6 +7,7 @@ import ReorderableList from "./exercise5-advanced-scripting-ARIA/reorderable-lis
 const DemoSandbox = () => {
     let [currentCSSClass, setCurrentCSSClass] = useState(null)
     let [dialogActive, setDialogActive] = useState(false)
+    const [ariaHiddenActive, setAriaHiddenActive] = useState(false)
     const cssTargetBtnRef = useRef(null)
     const modalLaunchBtnRef = useRef(null)
     const dialogHeadingRef = useRef(null)
@@ -14,6 +15,12 @@ const DemoSandbox = () => {
 
     const handleChange = (event) => {
         setCurrentCSSClass(event.target.id)
+
+        if (event.target.id === 'ariaHidden') {
+            setAriaHiddenActive(true)
+        } else {
+            setAriaHiddenActive(false)
+        }
     }
     const launchModal = () => {
         setDialogActive(true)
@@ -43,7 +50,7 @@ const DemoSandbox = () => {
 
                 <section aria-labelledby="header1">
                     <h2 className="h3-style" id="header1">CSS Visibility Techniques</h2>
-                    <button className={currentCSSClass} id="css-target-button" ref={cssTargetBtnRef}>
+                    <button aria-hidden={ariaHiddenActive ? true : null} className={currentCSSClass} id="css-target-button" ref={cssTargetBtnRef}>
                         Reserve
                     </button>
                     <fieldset>
@@ -63,6 +70,10 @@ const DemoSandbox = () => {
                         <label>
                             Visibility
                             <input onChange={handleChange} type="radio" name="radios" id="visibilityHidden" />
+                        </label>
+                        <label>
+                            aria-hidden
+                            <input onChange={handleChange} type="radio" name="radios" id="ariaHidden" />
                         </label>
                         <label>
                             None
@@ -98,6 +109,7 @@ const DemoSandbox = () => {
                     </ul>
                     <button onClick={hideModal}>Cool</button>
                 </dialog>
+                <div className={`backdrop ${dialogActive ? 'active' : null}`}></div>
             </HeaderPortal>
         </>
     )

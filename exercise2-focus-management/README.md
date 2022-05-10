@@ -7,6 +7,8 @@ keeping things simple as much as possible. Avoid relying on hidden keyboard shor
 functionality and instead follow established conventions and navigation patterns, with obvious
 keyboard focus states to show keyboard users where they are on the screen.
 
+Modal demo: http://localhost:1234/component-sandbox
+
 Roving tabindex is a technique to reduce the number of tab stops in a component that should act as a
 single control. Examples could include calendar widgets, numerical onscreen keyboards, ARIA menus, and
 tab switchers. In our date picker, we will implement roving tabindex so that the grid has one tab stop

@@ -2,7 +2,7 @@ import React from "react"
 import * as ReactAriaLiveAnnouncer from "@react-aria/live-announcer"
 import "./reorderable-list.scss"
 
-const itemData = ['Owls', 'Hawks', 'Penguins']
+const itemData = ['Paddle Boards', 'Bikes', 'Skis']
 
 const ReorderableListItem = React.forwardRef(({name, index, callbackFn}, ref) => {
   const handleKeyDown = (event) => {
@@ -71,7 +71,7 @@ export default ReorderableList = () => {
     <div className={`sortable-list-group ${isReordering ? `active` : null}`}>
       <button id="edit-list" onClick={toggleEditMode}>
         <span className="editingText">Exit edit mode</span>
-        <span className="defaultText">Edit bird list</span>
+        <span className="defaultText">Edit gear list</span>
       </button>
       <ul className="sortable-list"
         aria-roledescription="Sortable List"
