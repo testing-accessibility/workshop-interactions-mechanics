@@ -87,6 +87,16 @@ const DatePicker = ({numMonthsAheadToStart = 2}) => {
     const [focusedDate, setFocusedDate] = useState(firstFocusedItemDate)
     const buttonRefs = useRef([])
 
+    const handleKeyDown = (event) => {
+        // disallow page scroll on up or down arrow keys
+        switch (event.key) {
+            case 'ArrowUp':
+            case 'ArrowDown':
+                event.preventDefault()
+                break
+        }
+    }
+
     const handleKeyUp = (event) => {
         let buttonDate = event.target.dataset.date
         let buttonDateIndex = datesArray.indexOf(buttonDate)
@@ -232,6 +242,7 @@ const DatePicker = ({numMonthsAheadToStart = 2}) => {
                                         ].join(' ').trim()}
                                         data-date={day.date}
                                         onClick={() => selectDay(day)}
+                                        onKeyDown={(event) => handleKeyDown(event)}
                                         onKeyUp={(event) => handleKeyUp(event)}
                                         ref={elementRef => {buttonRefs.current.push(elementRef)}}
                                         tabIndex={focusedDate === day.date ? '0' : '-1'}
