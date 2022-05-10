@@ -1,0 +1,53 @@
+.sortable-list-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    
+    &> button {
+      margin: 0.5em auto 0.5em 0.5em;
+  
+    }    
+    .editingText {
+      display: none;
+    }
+    
+    &.active {
+      .editingText {
+        display: block;
+      }
+      .defaultText {
+        display: none;
+      }
+      button.edit {
+        visibility: visible;
+      }
+    }
+  }
+  .sortable-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      border: 1px solid #ccc;
+      display: flex;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0.5em;
+      padding: 1em;
+      
+      button.edit {
+        background: url(/images/icons/sort.svg) no-repeat;
+        background-position: center center;
+        background-size: auto 100%;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        display: block;
+        height: 1rem;
+        padding: 1em;
+        margin-left: auto;
+        visibility: hidden;
+        width: 1rem;
+      }
+    }
+  }

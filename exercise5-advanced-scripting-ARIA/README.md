@@ -16,6 +16,8 @@ is possible that `role="application"` could make the widget easier to use in NVD
 through to the browser to function properly. But you better have a darn good reason and do adequate testing. DO NOT use this
 role for existing widgets, such as treeviews, tab switchers, tables with focusable items inside, dialogs, or toolbars.
 
+Reorderable list demo: http://localhost:1234/component-sandbox
+
 ## Exercise: Make a slide carousel accessible and test in NVDA
 
 For this final exercise, take a W3schools.com carousel in `components/slideshow/slideshow.js` and make it accessible in a

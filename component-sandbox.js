@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from "react"
 
 import HeaderPortal from "components/header-portal"
 import "./component-sandbox.scss"
+import ReorderableList from "./exercise5-advanced-scripting-ARIA/reorderable-list"
 
 const DemoSandbox = () => {
     let [currentCSSClass, setCurrentCSSClass] = useState(null)
@@ -70,9 +71,14 @@ const DemoSandbox = () => {
                     </fieldset>
                 </section>
 
-                <section>
+                <section aria-labelledby="header2">
                     <h2 className="h3-style" id="header2">Modal Dialog</h2>
                     <button onClick={launchModal} ref={modalLaunchBtnRef}>Launch modal</button>
+                </section>
+
+                <section aria-labelledby="header3">
+                    <h2 className="h3-style" id="header3">Sortable List</h2>
+                    <ReorderableList />
                 </section>
             </div>
 
