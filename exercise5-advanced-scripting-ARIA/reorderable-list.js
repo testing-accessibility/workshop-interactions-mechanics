@@ -30,7 +30,7 @@ const announce = (message) => {
   ReactAriaLiveAnnouncer.announce(message, 'assertive')
 }
 
-export default ReorderableList = () => {
+const ReorderableList = () => {
   const [items, setItems] = React.useState(itemData)
   const [isReordering, setIsReordering] = React.useState(false)
   const listButtonRefs = React.useRef([])
@@ -90,3 +90,5 @@ export default ReorderableList = () => {
     </div>
   )
 }
+
+export default ReorderableList
