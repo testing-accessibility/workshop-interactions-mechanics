@@ -1,8 +1,8 @@
 import React, {useRef, useState, useEffect} from "react"
 
 import HeaderPortal from "components/header-portal"
-import "./component-sandbox.scss"
-import ReorderableList from "./exercise5-advanced-scripting-ARIA/reorderable-list"
+import "/component-sandbox.scss"
+import ReorderableList from "/exercise5-advanced-scripting-ARIA/reorderable-list"
 
 const DemoSandbox = () => {
     let [currentCSSClass, setCurrentCSSClass] = useState(null)
